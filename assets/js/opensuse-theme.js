@@ -321,7 +321,7 @@ var contributionInterpolation = function () {
       var $detailsContent = parent.find('.hidden-content').html();
       var $details = "<div class='contribution-extended-details animated fadeInUp'>" + $detailsContent + "</div>"
 
-      $("#contribute-details").css({background: 'rgba(109, 167, 65, 0.9)'})
+      $("#contribute-details").css({background: 'rgba(23, 158, 214, 0.9)'})
         .append($details).append($closeDetails);
 
       //close the details
