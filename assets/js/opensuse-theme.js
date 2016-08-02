@@ -50,11 +50,11 @@ $(window).bind('scroll',function(e){
 var $mainMenu;
 
 $(function() {
-  $mainMenu = $('#main-menu').html()
-  $('aside').html($mainMenu)
+  $mainMenu = $('#main-menu').html();
+  $('aside').html($mainMenu);
   headerHeight = $('header').outerHeight();
   mainSectionHeight = $('#opensuse-os').outerHeight() - headerHeight;
-})
+});
 
 var scrolledDown = false;
 
@@ -151,7 +151,7 @@ function osMoreInformation(os) {
   moreInfoOpened = true
   //get the height of the main container
   containerHeight = $('#opensuse-os').outerHeight();
-  
+
 
   //find the information of the selected distribution
   $osSelected = os
@@ -160,7 +160,7 @@ function osMoreInformation(os) {
   osSelectedIcon = $osSelected.find(".distributions-icon").html()
 
   window.location.hash = osSelectedTitle;
-  
+
   //dont let users click more than once
   $osSelected.addClass('not-clickable')
 
@@ -204,12 +204,12 @@ function osMoreInformation(os) {
     $('.os-icon').html(osSelectedIcon)
 
     $('.back-to-main-page').on('click', function() {
-      history.pushState('', document.title, window.location.pathname);  
+      history.pushState('', document.title, window.location.pathname);
       backToMainPageOs($osSelected)
     })
 
     $('#home, #opensuseLogo').on('click', function() {
-      history.pushState('', document.title, window.location.pathname);  
+      history.pushState('', document.title, window.location.pathname);
       scrolled = $(window).scrollTop();
       if (scrolled > mainSectionHeight) {
         setTimeout('backToMainPageOs($osSelected)', 900);
