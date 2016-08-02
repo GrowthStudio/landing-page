@@ -22,6 +22,7 @@ gulp.task('scripts', function() {
                    assets + 'js/vendor/jquery-cookie.js',
                    assets + 'js/vendor/jquery-lang.js',
                    assets + 'js/vendor/jquery.mobile.custom.js',
+                   assets + 'js/vendor/jquery.smartbanner.js',
                    assets + 'js/opensuse-theme.js'])
     .pipe(concat('main.js'))
     .pipe(rename({suffix: '.min'}))
@@ -48,6 +49,7 @@ gulp.task('less', function () {
 gulp.task('vendorCSS', ['less'], function() {
   return gulp.src([assets + 'css/vendor/animate/animate.css',
                    assets + 'css/vendor/owl-carousel/owl.carousel.css',
+                   assets + 'css/vendor/smartbanner/smartbanner.css',
                    assets + 'css/vendor/fontawesome/font-awesome.css'])
          .pipe(concat('vendor.css'))
          .pipe(rename({suffix: '.min'}))
