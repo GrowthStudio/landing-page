@@ -18,6 +18,7 @@
       }
     }
   }
+
   header {
     height: @menu-mobile-height;
     padding: 8px;
@@ -28,25 +29,31 @@
       padding-left: 0;
     }
   }
+
   section:first-of-type {
     padding-top: @menu-mobile-height;
   }
+
   #opensuse-os {
-    height: 960px;
-    
+    height: 1080px;
+    .topText {
+      margin-bottom: 0;
+    }
+
     .os-main {
-      margin-bottom: 0px;
+      margin-bottom: 0;
       .col-sm-6 {
         padding: 30px;
         &:first-of-type {
-          border-right: 0px solid transparent
+          border-right: 0 solid transparent
         }
         &:last-of-type {
-          border-left: 0px solid transparent
+          border-left: 0 solid transparent
         }
       }
     }
   }
+
   #opensuse-tools {
     h1 ~ h4 {
       margin-bottom: 60px;
@@ -63,25 +70,31 @@
       margin-top: 3em;
     }
   }
+
   h1 {
     font-size: 38px;
   }
+
   h2 {
     font-size: 28px;
   }
+
   .btn-check-tools {
     .text-center;
     margin: 0;
   }
+
   .to-try-out-img {
     .text-center;
     padding-bottom: 2em;
   }
+
   .opensuse-news {
     .owl-prev, .owl-next {
       display: none;
     }
   }
+
   #contribute-to-opensuse {
     h4 {
       padding: 0 15px;
@@ -115,6 +128,7 @@
       }
     }
   }
+
   .language-selector {
     text-align: center !important;
     padding-top: 1.7em;
@@ -130,6 +144,7 @@
     z-index: 99999;
   }
 }
+
 @media (max-width: @screen-phone) {
   #contribute-to-opensuse {
     .contribute-code,
@@ -154,14 +169,17 @@
       }
     }
   }
+
   #opensuse-tools .tools-container .media {
     height: 165px;
   }
+
   [src*="screenshot.png"] {
     width: 100%;
     height: auto;
     margin-top: 3em;
   }
+
   .tools-container .col-md-6 {
     padding: 0px;
   }
