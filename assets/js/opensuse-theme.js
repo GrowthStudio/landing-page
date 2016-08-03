@@ -69,6 +69,15 @@ function getScrolledData() {
     $(".go-to-top").fadeOut();
   }
 
+
+  if(scrolled > 82) {
+    $("#smartbanner").css("position", "absolute").css("top", "-82px")
+  }
+
+  if(scrolled < 82) {
+    $("#smartbanner").css("position", "static").css("top", "0px")
+  }
+
   // detect if the user has scrolled more than the first section (height) to reduce the size of the menu
   if (scrolled > mainSectionHeight) {
     headerChanges()
