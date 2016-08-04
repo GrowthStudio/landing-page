@@ -10,6 +10,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var stripDebug = require('gulp-strip-debug');
+var server = require('gulp-server-livereload');
 
 gulp.task('scripts', function() {
   return gulp.src([assets + 'js/vendor/jquery.min.js',
@@ -78,13 +79,15 @@ gulp.task('watch', function() {
   gulp.watch(assets + 'images/**/*', ['images']);
  });
 
-// Run python server on localhost:8000
-var serverCommand = 'python -m SimpleHTTPServer';
-
-var shell = require('gulp-shell');
-gulp.task('runServer', shell.task([
-  serverCommand
-]))
+gulp.task('server', function() {
+  gulp.src('./')
+    .pipe(server({
+      defaultFile: 'index.html',
+      livereload: true,
+      directoryListing: true,
+      open: true
+    }));
+});
 
 // Default Task
-gulp.task('default', ['scripts', 'less', 'vendorCSS', 'imagesCompression', 'watch']);
+gulp.task('default', ['scripts', 'less', 'vendorCSS', 'imagesCompression', 'watch', 'server']);
