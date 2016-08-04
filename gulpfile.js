@@ -87,7 +87,7 @@ gulp.task('server', function() {
       livereload: true,
       directoryListing: true,
       filter: function (filename, cb) {
-        cb(!/\.(sa|le)ss$|node_modules/.test(filename));
+        cb(!/\.(sa|le)ss$|node_modules|gulpfile\.js/.test(filename));
       },
       open: true
     }));
