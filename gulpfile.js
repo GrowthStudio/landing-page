@@ -80,11 +80,15 @@ gulp.task('watch', function() {
  });
 
 gulp.task('server', function() {
-  gulp.src('./')
+  gulp.src('.')
     .pipe(server({
       defaultFile: 'index.html',
+      fallback: 'index.html',
       livereload: true,
       directoryListing: true,
+      filter: function (filename, cb) {
+        cb(!/\.(sa|le)ss$|node_modules/.test(filename));
+      },
       open: true
     }));
 });
