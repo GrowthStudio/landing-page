@@ -1,5 +1,5 @@
 {
-  "version": "2.5.0",
-  "feature": ""
+  "version": "2.7.0",
+  "feature": "1. 优化性能 \n 2. 增加新功能介绍页面 \n 3. 添加 Growth 纸质版《全栈应用开发：精益实践》介绍页面 \n 4. 修复 bugs \n 5. 升级基础框架为 Angular 4、Ionic 3 正式版 \n 6. 正在往 React Native 迁移，8月底见。 "
 }
 
